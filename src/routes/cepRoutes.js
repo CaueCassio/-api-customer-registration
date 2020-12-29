@@ -4,11 +4,18 @@ const sendGetRequest = require('./../service');
 
 
 router.get('/consulta/:cep', (req,res) => {
-    var cepRecebido = req.params.cep;
-    const teste = sendGetRequest(cepRecebido)
-    console.log(teste)
-  
-    return res.send();
+    let cepRecebido = req.params.cep;
+
+    const teste23 = sendGetRequest(cepRecebido)
+        .then(function(teste){
+            console.log(teste)
+    })
+        .catch(function(error){
+            console.log(error)
+    })
+
+    return res.json(teste23.then());
+
 })
 
 module.exports = router;
