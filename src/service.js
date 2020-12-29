@@ -9,8 +9,8 @@ const sendGetRequest = async(cep) =>{
     }
 }
 
-// sendGetRequest(23010525)
-module.exports = sendGetRequest();
+
+module.exports = sendGetRequest;
 
 
 
