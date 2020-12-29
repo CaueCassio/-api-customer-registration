@@ -1,0 +1,30 @@
+{
+  "name": "-api-customer-registration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaueCassio/-api-customer-registration.git"
+  },
+  "keywords": [],
+  "author": "CássioCauê <cassio3620@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaueCassio/-api-customer-registration/issues"
+  },
+  "homepage": "https://github.com/CaueCassio/-api-customer-registration#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.2.0"
+  }
+}
