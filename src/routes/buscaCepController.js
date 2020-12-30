@@ -1,15 +1,9 @@
 const api = require('../apiCep')
+const clientes = require('../model/clientes');
+
 
 function getCep(req,res){
-  const { cep } = req.params;
-  console.log(cep);
-
-  try {
-      let apiTeste = api(cep);
-    } catch (error) {
-        console.log('error na busca')
-  }
-    return res.send('oi')
+    return res.send(clientes)
 }
 
 

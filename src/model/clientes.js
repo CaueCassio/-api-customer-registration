@@ -1,0 +1,4 @@
+
+cliente = [];
+
+module.exports = cliente;
