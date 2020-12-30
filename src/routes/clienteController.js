@@ -1,11 +1,11 @@
-const api = require('./apiCep')
+const api = require('../apiCep')
 
-function getCep(req,res){
+function createCliente(req,res){
   const { cep } = req.params;
   console.log(cep);
 
   try {
-        
+      let apiTeste = api(cep);
     } catch (error) {
         console.log('error na busca')
   }
@@ -14,7 +14,7 @@ function getCep(req,res){
 
 
 
-module.exports = getCep;
+module.exports = createCliente;
 
 
 
