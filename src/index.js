@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const cepRoutes = require('./routes/cepRoutes') 
+const cepRoutes = require('./routes') 
 const port = 4000;
 
 app.use(express.json());
