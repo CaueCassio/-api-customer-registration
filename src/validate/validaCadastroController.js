@@ -8,5 +8,4 @@ function validate(email,clientes){
     return false
 }
 
-
 module.exports = validate;

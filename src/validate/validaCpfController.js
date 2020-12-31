@@ -6,5 +6,4 @@ function buscaPorCpf(res, cpf, clientes){
             return res.status(400).json({message:' não existe esse CPF no banco de dados'});
     }
 }
-
 module.exports = buscaPorCpf;

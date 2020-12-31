@@ -6,5 +6,4 @@ function buscaPorEmail(res, email, clientes){
             return res.status(400).json({message:' não existe esse EMAIL no banco de dados'});
     }
 }
-
 module.exports = buscaPorEmail;

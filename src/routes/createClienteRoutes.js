@@ -13,16 +13,12 @@ async function createCliente(req,res){
     return res.status(404).json(`Email: ${email}, Já cadastrado!`)
  }
 
-    
-
   if(!cpf || !email || !cep)
       return res.status(404).json({message:'Campos invalido'})
- 
   api.api(cep,email,cpf);
 
   
   return res.status(201).json({message:'Cliente Cadastrado'})
-
 }
 
 

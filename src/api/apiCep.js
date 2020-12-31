@@ -1,13 +1,14 @@
 const axios = require('axios').default;
 const clientes = require('../model/clientes');
+const { uuid } = require('uuidv4');
 
 const api = async(cep,email,cpf) =>{
-
     try {
       const resp = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       const response = resp.data;
 
       let dadosCliente = {
+        id:uuid(),
         email: email,
         cpf : cpf,
         cep: response.cep,
@@ -18,7 +19,6 @@ const api = async(cep,email,cpf) =>{
         uf: response.uf,
         }
 
-
           clientes.push(dadosCliente)
           return dadosCliente;
      
@@ -26,8 +26,5 @@ const api = async(cep,email,cpf) =>{
        console.log('error')
     }
 }
-
-
-
 
 module.exports.api = api;
