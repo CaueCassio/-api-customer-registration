@@ -1,9 +1,8 @@
 
 const clientes = require('../model/clientes');
 
-
 function getCep(req,res){
-    return res.send(clientes)
+    return res.status(200).send(clientes)
 }
 
 

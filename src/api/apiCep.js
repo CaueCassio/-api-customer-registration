@@ -1,12 +1,8 @@
 const axios = require('axios').default;
 const clientes = require('../model/clientes');
-const validate = require('../validate/validaCadastroController')
-
 
 const api = async(cep,email,cpf) =>{
 
-  validate();
- 
     try {
       const resp = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       const response = resp.data;
@@ -22,20 +18,11 @@ const api = async(cep,email,cpf) =>{
         uf: response.uf,
         }
 
-        if (email, cpf, cep) {
-          for (const key in clientes){
-            if(clientes[key].email === email){
-                console.log('estou aqui')
-                return res.status(404).json({message: 'dados já cadastrado'});;
-             }
-         }
-
-        } else {
 
           clientes.push(dadosCliente)
           return dadosCliente;
-        }
-    } catch(e) {
+     
+        } catch(e) {
        console.log('error')
     }
 }
