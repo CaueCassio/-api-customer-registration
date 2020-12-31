@@ -5,12 +5,10 @@ const clientes = require('../model/clientes');
 
 function createCliente(req,res){
   const {cep, email, cpf}  = req.body;
-
- const cliente = { id: uuid(), email, cpf, cep}
- clientes.push(cliente)
- api.api(cep)
+  const cliente = { id: uuid(), email, cpf, cep}
+  api.api(cep,email,cpf);
     
-    return res.json(cliente)
+    return res.json(clientes)
 }
 
 
