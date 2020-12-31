@@ -3,8 +3,6 @@ const buscaPorEmail = require('../validate/validaEmailController');
 
 function getCadastroEmail(req,res){
     const { email } = req.params;
-
-    
     buscaPorEmail(res, email, clientes);
 }
 

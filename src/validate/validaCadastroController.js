@@ -1,9 +1,11 @@
-async function validadorCadastro(res, cpf, clientes,email){
+function validate(res, email,clientes){
     for (const key in clientes){
-        if(clientes[key].email === email || clientes[key].cpf === cpf ){
-            return res.status(400).json({message: 'Já possui esses dados cadastrado'});
+        if(clientes[key].email === email){
+            console.log('estou aqui')
+            return true;
          }
     }
 }
 
-module.exports = validadorCadastro;
+
+module.exports = validate;
