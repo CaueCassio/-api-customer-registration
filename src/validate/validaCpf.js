@@ -1,4 +1,3 @@
-
 function buscaPorCpf(res, cpf, clientes){
     for (const key in clientes){
         if(clientes[key].cpf === cpf){
