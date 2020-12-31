@@ -1,4 +1,5 @@
 function buscaPorEmail(res, email, clientes){
+   
     for (const key in clientes){
         if(clientes[key].email === email){
             return res.send(clientes[key]);

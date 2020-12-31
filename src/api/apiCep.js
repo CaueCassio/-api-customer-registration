@@ -1,8 +1,9 @@
 const axios = require('axios').default;
 const clientes = require('../model/clientes');
 
+
 const api = async(cep,email,cpf) =>{
-    
+
     try {
       const resp = await axios.get(`https://viacep.com.br/ws/${cep}/json/`);
       const response = resp.data;
@@ -16,11 +17,12 @@ const api = async(cep,email,cpf) =>{
         bairro: response.bairro,
         localidade: response.localidade,
         uf: response.uf,
-    }
+        }
         clientes.push(dadosCliente)
-  
-    } catch {
-       console.error("Deu ruim no axios");
+        return dadosCliente;
+
+    } catch(e) {
+       console.log('error')
     }
 }
 

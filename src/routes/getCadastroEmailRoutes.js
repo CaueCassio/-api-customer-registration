@@ -1,9 +1,10 @@
 const clientes = require('../model/clientes');
-const buscaPorEmail = require('../validate/validaEmail');
+const buscaPorEmail = require('../validate/validaEmailController');
 
 function getCadastroEmail(req,res){
     const { email } = req.params;
-    console.log(email, 'asmdasmdkaskdasmdp')
+
+    
     buscaPorEmail(res, email, clientes);
 }
 
