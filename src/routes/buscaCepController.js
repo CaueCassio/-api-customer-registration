@@ -1,4 +1,4 @@
-const api = require('../apiCep')
+const api = require('../api/apiCep')
 const clientes = require('../model/clientes');
 
 

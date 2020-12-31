@@ -1,5 +1,5 @@
 const axios = require('axios').default;
-const clientes = require('./model/clientes');
+const clientes = require('../model/clientes');
 
 const api = async(cep) =>{
     try {
