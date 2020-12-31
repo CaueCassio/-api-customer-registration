@@ -1,4 +1,4 @@
 
-cliente = ['1'];
+cliente = [];
 
 module.exports = cliente;
