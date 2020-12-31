@@ -1,10 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const buscaCepController = require('./buscaAllCadastrosController')
-const clienteController = require('./createClienteController')
-const getCadastroEmail = require('./buscaOneCadastroController');
+const buscaCepController = require('./getCadastrosRoutes')
+const clienteController = require('./createClienteRoutes')
+const getCadastroCpf = require('./getCadastroCpfRoutes');
+const getCadastroEmail = require('./getCadastroEmailRoutes');
 
-router.get('/cadastro/:cpf', getCadastroEmail)
+router.get('/cpf/:cpf', getCadastroCpf)
+router.get('/email/:email', getCadastroEmail)
 router.get('/cadastro', buscaCepController)
 router.post('/cliente', clienteController)
 
