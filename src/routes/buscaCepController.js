@@ -7,7 +7,6 @@ function getCep(req,res){
 }
 
 
-
 module.exports = getCep;
 
 
