@@ -6,7 +6,7 @@ Install the dependencies:
 $ npm install
 ```
 
-Use the command below to start the project without generating the documentation:
+Use the command start server:
 
 ```bash
 $ nodemon server.js
